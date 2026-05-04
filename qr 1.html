@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>عرض تقديمي: التلعيب - Gamification</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #4a90e2;
+            --secondary: #673ab7;
+            --accent: #ff9800;
+            --success: #4caf50;
+            --dark: #2d3436;
+            --light: #f9f9f9;
+        }
+
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: #eef2f7;
+            margin: 0;
+            padding: 0;
+            color: var(--dark);
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: -50px auto 50px;
+            padding: 20px;
+        }
+
+        /* الشكل التوضيحي للمفهوم */
+        .concept-box {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            text-align: center;
+            margin-bottom: 40px;
+            border-top: 8px solid var(--primary);
+        }
+
+        /* شبكة الخصائص (أشكال سداسية أو دائرية) */
+        .grid-layout {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            margin: 40px 0;
+        }
+
+        .shape-card {
+            background: white;
+            padding: 30px;
+            text-align: center;
+            border-radius: 50% 50% 50% 0; /* شكل مميز */
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+            border: 2px solid var(--secondary);
+        }
+
+        .shape-card:hover {
+            transform: translateY(-10px);
+            background: var(--secondary);
+            color: white;
+        }
+
+        /* قسم الأهداف (شكل متعرج أو قائمة أيقونات) */
+        .goals-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            background: #fff;
+            padding: 40px;
+            border-radius: 20px;
+            margin-bottom: 40px;
+        }
+
+        .goal-item {
+            width: 45%;
+            margin: 10px;
+            padding: 20px;
+            background: #f1f8ff;
+            border-right: 10px solid var(--accent);
+            border-radius: 10px;
+        }
+
+        /* قسم المميزات (بطاقات ملونة) */
+        .advantage-card {
+            background: var(--success);
+            color: white;
+            padding: 20px;
+            border-radius: 15px;
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 15px;
+        }
+
+        .section-title {
+            text-align: center;
+            color: var(--secondary);
+            font-weight: 900;
+            font-size: 2em;
+            margin-top: 50px;
+        }
+
+        /* قائمة الطلاب */
+        .students-footer {
+            background: var(--dark);
+            color: white;
+            padding: 50px 20px;
+            border-radius: 30px 30px 0 0;
+        }
+
+        .students-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            max-width: 1000px;
+            margin: 30px auto;
+        }
+
+        .student-name {
+            background: rgba(255,255,255,0.1);
+            padding: 15px;
+            border-radius: 10px;
+            border-left: 4px solid var(--accent);
+        }
+
+        .icon {
+            font-size: 40px;
+            margin-bottom: 15px;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>استراتيجية التلعيب (Gamification)</h1>
+    <p>دمج المتعة بالتعلم لتحقيق أقصى استفادة</p>
+</header>
+
+<div class="container">
+    
+    <!-- المفهوم -->
+    <div class="concept-box">
+        <span class="icon">💡</span>
+        <h2>مفهوم التلعيب</h2>
+        <p>هو استخدام عناصر الألعاب وآليات تصميمها في سياقات غير مرتبطة بالألعاب (مثل التعليم والعمل) بهدف تحفيز المشاركين، وزيادة تفاعلهم، وحل المشكلات بأسلوب إبداعي وشيق.</p>
+    </div>
+
+    <!-- الخصائص -->
+    <h2 class="section-title">⚙️ خصائص التلعيب</h2>
+    <div class="grid-layout">
+        <div class="shape-card">
+            <h3>التفاعلية</h3>
+            <p>خلق بيئة تسمح للمستخدم بالتفاعل المباشر مع المحتوى.</p>
+        </div>
+        <div class="shape-card">
+            <h3>القواعد</h3>
+            <p>وجود قوانين واضحة تنظم عملية "اللعب" والتعلم.</p>
+        </div>
+        <div class="shape-card">
+            <h3>التحدي</h3>
+            <p>تقديم مهام تتدرج في الصعوبة لاستثارة مهارات الفرد.</p>
+        </div>
+        <div class="shape-card">
+            <h3>الملاحظات</h3>
+            <p>تلقي تغذية راجعة فورية (نقاط/رسائل) عند كل إنجاز.</p>
+        </div>
+    </div>
+
+    <!-- الأهداف -->
+    <h2 class="section-title">🎯 أهداف التلعيب</h2>
+    <div class="goals-section">
+        <div class="goal-item">
+            <h3>تعديل السلوك</h3>
+            <p>توجيه المستخدمين نحو ممارسات إيجابية من خلال التحفيز.</p>
+        </div>
+        <div class="goal-item">
+            <h3>زيادة الإنتاجية</h3>
+            <p>تحويل المهام الروتينية إلى تحديات ممتعة تزيد من معدل الإنجاز.</p>
+        </div>
+        <div class="goal-item">
+            <h3>تعميق الولاء</h3>
+            <p>بناء علاقة قوية ومستمرة بين المستخدم والمنصة أو المحتوى التعليمي.</p>
+        </div>
+        <div class="goal-item">
+            <h3>تطوير المهارات</h3>
+            <p>اكتساب خبرات جديدة عبر التجربة والخطأ في بيئة آمنة.</p>
+        </div>
+    </div>
+
+    <!-- المميزات -->
+    <h2 class="section-title">🌟 مميزات التلعيب</h2>
+    <div class="advantage-card">
+        <h3>1. تعزيز الدافعية الداخلية والخارجية</h3>
+        <p>يجمع بين حب الفوز (مكافآت) والرغبة في التعلم الذاتي.</p>
+    </div>
+    <div class="advantage-card" style="background: var(--primary);">
+        <h3>2. كسر حاجز الملل</h3>
+        <p>يحول المحتوى الجاف إلى تجربة بصرية وسمعية مثيرة.</p>
+    </div>
+    <div class="advantage-card" style="background: var(--secondary);">
+        <h3>3. تحسين استبقاء المعلومات</h3>
+        <p>التطبيق العملي والمنافسة يساعدان على ترسيخ المعلومة في الذاكرة لفترة أطول.</p>
+    </div>
+
+</div>
+
+<!-- إعداد الطلاب -->
+<section class="students-footer">
+    <h2 style="text-align: center; color: var(--accent);">فريق العمل (إعداد الطلاب)</h2>
+    <div class="students-grid">
+        <div class="student-name">1- أحمد عبدالرحيم أحمد</div>
+        <div class="student-name">2- يوسف ياسر محمد</div>
+        <div class="student-name">3- نور الدين حسين</div>
+        <div class="student-name">4- فريال عبدالوهاب</div>
+        <div class="student-name">5- اسلام عماد عبدالحميد</div>
+        <div class="student-name">6- شهاب الدين حساني</div>
+        <div class="student-name">7- مؤمن حسن عبدالفتاح</div>
+        <div class="student-name">8- اسلام يحيي عبدالرحيم</div>
+        <div class="student-name">9- ونس مدحت عبدالنور</div>
+        <div class="student-name">10- محمد عبدالحكيم علي</div>
+        <div class="student-name">11- سيف الدين عصام</div>
+        <div class="student-name">12- محمد سمير حامد</div>
+    </div>
+    <p style="text-align: center; margin-top: 30px; opacity: 0.6;">© 2026 - مشروع تكنولوجيا التعليم</p>
+</section>
+
+</body>
+
+</html>
